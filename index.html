@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCloud Request Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>New-Hire/Termination/Change Request | IT/HR Copy</header>
+
+    <section class="Checkboxes">
+
+        <!--New Employee Checkbox-->
+        <input type="checkbox" id="newEmployee">
+        <label for="newEmployee">New Employee</label>
+
+        <!--Termination Checkbox-->
+        <input type="checkbox" id="termination">
+        <label for="termination">Termination</label>
+
+        <!--Change/Move Checkbox-->
+        <input type="checkbox" id="changeMove">
+        <label for="changeMove">Change/Move</label>
+
+    </section>
+
+    <section class="Contact">
+
+        <!--Requestor Name field-->
+        <label for="requestor">Requestor Name:</label>
+        <input type="text" id="requestor">
+
+        <!--Request Date field-->
+        <label for="requestDate">Request Date:</label>
+        <input type="datetime-local" id="requestDate">
+
+      <div>
+
+        <!--Employee Name field-->
+        <label for="employeeName">Employee Name:</label>
+        <input type="text" id="employeeName">
+
+        <!--Contact Number field-->
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber">
+        
+      </div>
+    </section>
+
+    <section class="LoginCredentials">
+        Login Credentials for Computer/Device
+      <div>
+        
+        <!--Username field-->
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+
+        <!--Start Date field-->
+        <label for="startDate">Start Date:</label>
+        <input type="datetime-local" id="startDate">
+
+        <!--End Date field-->
+        <label for="endDate">End Date:</label>
+        <input type="datetime-local" id="endDate">
+
+      </div>
+      <div>Note: All passwords default to P@$$word01</div>
+    </section>
+
+    <section class="Username_License">
+        GoCloud Managed Platform Information
+      <div class="reqComp">Requested | Completed</div>
+      <div>
+
+        <!--Requested Completed checkboxes for username-->
+        <input type="checkbox" id="reqUsername">
+        <input type="checkbox" id="compUsername">
+
+        <!--Microsoft 365 Username field-->
+        <label for="microsoftUsername">Microsoft 365/Gsuite username:</label>
+        <input type="text" id="microsoftUsername"> @
+        <input type="text" id="domainName">
+
+        <!--Block Sign-in checkbox-->
+        <input type="checkbox" id="blockSignin">
+        <label for="blockSignin">Block Sign-in</label>
+      </div>
+      <div>
+
+        <!--Add | Remove labels-->
+        <label class="addRemvEmail">Add | Remove</label>
+        <label class="addRemvApps">Add | Remove</label>
+        <label class="addRemvArchive">Add | Remove</label>
+        <label class="addRemvKiosk">Add | Remove</label>
+
+      </div>
+      <div>
+
+        <!--Requested Completed checkboxes for license-->
+        <input type="checkbox" id="reqLicense">
+        <input type="checkbox" id="compLicense">
+
+        <!--Microsoft 365 License checkboxes-->
+        Microsoft 365/Gsuite License (Affects Billing):
+
+        <!--Email checkboxes-->
+        <input type="checkbox" id="addEmail">
+        <input type="checkbox" id="remvEmail">
+        <label for="addEmail remvEmail">Email</label>
+
+        <!--App Checkboxes-->
+        <input type="checkbox" id="addApps">
+        <input type="checkbox" id="remvApps">
+        <label for="addApps remvApps">Apps</label>
+
+        <!--Archive Checkboxes-->
+        <input type="checkbox" id="addArchive">
+        <input type="checkbox" id="remvArchive">
+        <label for="addArchive remvArchive">Archive</label>
+
+        <!--Kiosk Checkboxes-->
+        <input type="checkbox" id="addKiosk">
+        <input type="checkbox" id="remvKiosk">
+        <label for="addKiosk remvKiosk">Kiosk</label>
+
+      </div>
+    </section>
+
+    <section class="DistributionList">
+        <!--Requested Completed checkboxes for distribution list-->
+        <input type="checkbox" id="reqList">
+        <input type="checkbox" id="compList">
+
+        Microsoft 365/Gsuite Distribution List Membership
+      <div>Please select/specify which distribution list(s) the employee will join or be removed from.</div>
+      <div>Add | Remove</div>
+
+      <div>
+        <!--Distribution List checkboxes-->
+        <input type="checkbox" id="addList">
+        <input type="checkbox" id="remvList">
+
+        <!--Distribution List Fields-->
+        <input type="text" id="distList">
+        <label for="distList">@</label>
+
+        <!--Distribution Checkbox-->
+        <input type="checkbox" id="distribution">
+        <label for="distribution">Distribution</label>
+
+        <!--Shared Mailbox Checkbox-->
+        <input type="checkbox" id="sharedMbx">
+        <label for="sharedMbx">Shared Mbx</label>
+
+        <!--Alias Checkbox-->
+        <input type="checkbox" id="alias">
+        <label for="alias">Alias</label>
+
+        </div>
+        <div>
+          <!--REMOVE FROM ALL LIST CHECKBOX-->
+          <input type="checkbox" id="remvAll">
+          <label for="remvAll">REMOVE FROM ALL LISTS</label>
+
+        </div>
+    </section>
+
+    <section class="ConvertSharedMbx">
+          <input type="checkbox" id="reqMbx">
+          <input type="checkbox" id="compMbx">
+          Convert to Shared Mbx (50GB Max) and add the following users for access/replies:
+
+        <div>
+          <!--Convert to Shared Mbx field-->
+          <input type="text" id="convMbx">
+          <label for="convMbx">@</label>
+
+        </div>
+        <div>
+          <!--Mbx Actions (Enable, Auto-Reply, etc.)-->
+          <input type="checkbox" id="reqMbxAction">
+          <input type="checkbox" id="compMbxAction">
+          <!--Enable checkbox-->
+          <label for="enable">Enable</label>
+          <input type="checkbox" id="enable">
+          <!--Auto Reply Checkbox-->
+          <label for="autoReply">Auto-Reply(Use additional Notes Below)</label>
+          <input type="checkbox" id="autoReply">
+          <!--Archive checkbox-->
+          <label for="archive">Archive</label>
+          <input type="checkbox" id="archive">
+          <!--Forward to field-->
+          <label for="frwd">Forward to:</label>
+          <input type="text" id="frwd">@
+
+        </div>
+    </section>
+
+    <section class="Phone">
+          <!--New Phone and Extension fields-->
+          <input type="checkbox" id="reqPhone">
+          <input type="checkbox" id="compPhone">
+          <!--Number and extension field-->
+          <label for="numbExt">New Phone Number and Extension:</label>
+          <input type="text" id="numbExt">
+
+        <div>
+          <!--Phone Brand and Model field-->
+          <label for="brandModel">Phone set Brand and Model:</label>
+          <input type="text" id="brandModel">
+
+        </div>
+
+        <div>
+          <!--Phone Mac Address field-->
+          <label for="macAdd">Phone set MAC Address:</label>
+          <input type="text" id="macAdd">
+
+          </div>
+    </section>
+
+    <section class="Computer">
+          <!--New Computer fields-->
+          <input type="checkbox" id="reqComputer">
+          <input type="checkbox" id="compComputer">
+          <!--Computer Name field-->
+          <label for="newComputer">New Computer Name:</label>
+          <input type="text" id="newComputer">
+          <!--Type checkboxes-->
+          Type:
+          <!--Laptop-->
+          <input type="checkbox" id="laptop">
+          <label for="laptop">Laptop</label>
+          <!--Tablet-->
+          <input type="checkbox" id="tablet">
+          <label for="tablet">Tablet</label>
+          <!--BYOD-->
+          <input type="checkbox" id="byod">
+          <label for="byod">BYOD</label>
+
+        <div>
+          <!--PC MAC Address/Serial field-->
+          <label for="serialNum">PC MAC Address/Serial:</label>
+          <input type="text" id="serialNum">
+
+        </div>
+
+        <div>
+          <!--PC Make/Model-->
+          <label for="pcMakeModel">PC Make/Model:</label>
+          <input type="text" id="pcMakeModel">
+
+          </div>
+    </section>
+
+    <section class="Printer">
+          <!--Printer/MFP fields-->
+          <input type="checkbox" id="reqPrinter">
+          <input type="checkbox" id="compPrinter">
+          <!--Printer name-->
+          <label for="printMFP">Printer/MFP:</label>
+          <input type="text" id="printMFP">
+          <!--Type checkboxes-->
+          Type:
+          <!--Workgroup-->
+          <input type="checkbox" id="workgroup">
+          <label for="workgroup">Workgroup</label>
+          <!--Tablet-->
+          <input type="checkbox" id="desktop">
+          <label for="desktop">Desktop</label>
+
+        </div>
+
+        <div>
+          <!--IP Address field-->
+          <label for="ipAdd">IP Address:</label>
+          <input type="text" id="ipAdd">
+
+          </div>
+
+        <div>
+          <!--Printer Make/Model-->
+          <label for="prntMakeModel">Make/Model:</label>
+          <input type="text" id="prntMakeModel">
+
+          </div>
+    </section>
+
+    <section class="VPNandNAS">
+        <!--VPN ACCESS CHECKBOXES-->
+        <input type="checkbox" id="reqVPN">
+        <input type="checkbox" id="compVPN">
+        VPN Access:
+        <!--Yes and No VPN checks-->
+        <input type="checkbox" id="vpnYes">
+        <label for="vpnYes">Yes</label>
+        <input type="checkbox" id="vpnNo">
+        <label for="vpnNo">No</label>
+
+      <div>
+        <!--NAS ACCESS CHECKBOXES-->
+        <input type="checkbox" id="reqNAS">
+        <input type="checkbox" id="compNAS">
+        NAS Access:
+        <!--Yes and No NAS checks-->
+        <input type="checkbox" id="nasYes">
+        <label for="vpnYes">Yes</label>
+        <input type="checkbox" id="nasNo">
+        <label for="vpnNo">No</label>
+
+      </div>
+    </section>
+
+    <section class="AdditionalNotes">
+        Additional Notes:
+      <div>
+        <input type="text" id="Notes">
+      </div>
+    </section>
+
+    <section class="NonGoCloudInfo">
+        Non-GoCloud Managed Platform Information
+      <div>Requested | Completed</div>
+      <div>
+        <input type="checkbox" id="reqCRM">
+        <input type="checkbox" id="compCRM">
+        <!--CRM/Case Management field-->
+        <label for="crm">CRM / Case Management - Other</label>
+        <input type="text" id="crm">
+
+      </div>
+
+      <div>
+        <input type="checkbox" id="reqAcc">
+        <input type="checkbox" id="compAcc">
+        <!--Accounting/Financial field-->
+        <label for="accFin">Accounting / Financial - Other</label>
+        <input type="text" id="accFin">
+
+      </div>
+    </section>
+
+</body>
+</html>
