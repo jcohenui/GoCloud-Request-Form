@@ -10,121 +10,167 @@
 <body>
     <header>New-Hire/Termination/Change Request | IT/HR Copy</header>
 
-    <section class="Checkboxes">
-
+    <section class="Requests">
+      <ul class="request-list">
         <!--New Employee Checkbox-->
-        <input type="checkbox" id="newEmployee">
-        <label for="newEmployee">New Employee</label>
-
+        <li>
+          <label class="request-option">
+            <input type="checkbox" id="newEmployee">
+            NEW EMPLOYEE
+          </label>
+        </li>
         <!--Termination Checkbox-->
-        <input type="checkbox" id="termination">
-        <label for="termination">Termination</label>
-
+        <li>
+          <label class="request-option">
+            <input type="checkbox" id="termination">
+            TERMINATION
+          </label>
+        </li>
         <!--Change/Move Checkbox-->
-        <input type="checkbox" id="changeMove">
-        <label for="changeMove">Change/Move</label>
-
+        <li>
+          <label class="request-option">
+            <input type="checkbox" id="changeMove">
+            CHANGE/MOVE
+          </label>
+        </li>
+      </ul>
     </section>
 
     <section class="Contact">
 
         <!--Requestor Name field-->
-        <label for="requestor">Requestor Name:</label>
-        <input type="text" id="requestor">
-
+        <div class="field">
+          <label for="requestor">Requestor Name:</label>
+          <input type="text" id="requestor">
+        </div>
+      
         <!--Request Date field-->
-        <label for="requestDate">Request Date:</label>
-        <input type="datetime-local" id="requestDate">
-
-      <div>
+        <div class="field">
+          <label for="requestDate">Request Date:</label>
+          <input type="datetime-local" id="requestDate">
+        </div>
 
         <!--Employee Name field-->
-        <label for="employeeName">Employee Name:</label>
-        <input type="text" id="employeeName">
+        <div class="field">
+          <label for="employeeName">Employee Name:</label>
+          <input type="text" id="employeeName">
+        </div>
 
         <!--Contact Number field-->
-        <label for="contactNumber">Contact Number:</label>
-        <input type="tel" id="contactNumber">
-        
-      </div>
+        <div class="field">
+          <label for="contactNumber">Contact Number:</label>
+          <input type="tel" id="contactNumber">
+        </div>
+
     </section>
 
-    <section class="LoginCredentials">
-        Login Credentials for Computer/Device
-      <div>
-        
-        <!--Username field-->
-        <label for="username">Username:</label>
-        <input type="text" id="username">
+    <section class="login-credentials">
+        <div class="title">Login Credentials for Computer/Device</div>
+        <div class="credentials-grid">
+          <!--Computer Username field-->
+          <div class="field">
+            <label for="compUsername">Username:</label>
+            <input type="text" id="compUsername">
+          </div>
 
-        <!--Start Date field-->
-        <label for="startDate">Start Date:</label>
-        <input type="datetime-local" id="startDate">
+          <!--Start Date field-->
+          <div class="field">
+            <label for="compPassword">Start Date:</label>
+            <input type="datetime-local" id="compPassword">
+          </div>
 
-        <!--End Date field-->
-        <label for="endDate">End Date:</label>
-        <input type="datetime-local" id="endDate">
+          <!--End Date field-->
+          <div class="field">
+            <label for="endDate">End Date:</label>
+            <input type="datetime-local" id="endDate">
+          </div>
+        </div>
 
-      </div>
-      <div>Note: All passwords default to P@$$word01</div>
+        <p class="note">Note: All passwords default to P@$$word01</p>
+
     </section>
 
-    <section class="Username_License">
-        GoCloud Managed Platform Information
+
+
+    <section class="Username-365">
+      <div class="title">GoCloud Managed Platform Information</div>
       <div class="reqComp">Requested | Completed</div>
-      <div>
-
+      <div class="Username-Grid">
+        
         <!--Requested Completed checkboxes for username-->
-        <input type="checkbox" id="reqUsername">
-        <input type="checkbox" id="compUsername">
+        <div class="field">
+          <input type="checkbox" id="req365Username">
+          <input type="checkbox" id="comp365Username">
+        </div>
 
         <!--Microsoft 365 Username field-->
-        <label for="microsoftUsername">Microsoft 365/Gsuite username:</label>
-        <input type="text" id="microsoftUsername"> @
-        <input type="text" id="domainName">
+        <div class="field">
+          <label for="microsoftUsername">Microsoft 365/Gsuite username:</label>
+          <input type="text" id="microsoftUsername"> 
+        </div>
+        <div class="field">
+          <label for="domain">@</label>
+          <input type="text" id="domain">
+        </div>
 
         <!--Block Sign-in checkbox-->
+        <div class="field">
         <input type="checkbox" id="blockSignin">
         <label for="blockSignin">Block Sign-in</label>
+        </div>
       </div>
-      <div>
+    </section>
 
+
+
+    <section class="License-365">
+        <div class="title">Microsoft 365/Gsuite License Options</div>
+        
         <!--Add | Remove labels-->
-        <label class="addRemvEmail">Add | Remove</label>
-        <label class="addRemvApps">Add | Remove</label>
-        <label class="addRemvArchive">Add | Remove</label>
-        <label class="addRemvKiosk">Add | Remove</label>
+        <div class="addRemove">
+          <div class="txt"><label class="addRemvEmail">Add | Remove</label></div>
+          <div class="txt"><label class="addRemvApps">Add | Remove</label></div>
+          <div class="txt"><label class="addRemvArchive">Add | Remove</label></div>
+          <div class="txt"><label class="addRemvKiosk">Add | Remove</label></div>
+        </div>
 
-      </div>
-      <div>
+        <div class= "License-Grid">
+          <!--Requested Completed checkboxes for license-->
+          <div class="field">
+            <input type="checkbox" id="reqLicense">
+            <input type="checkbox" id="compLicense">
+          </div>
 
-        <!--Requested Completed checkboxes for license-->
-        <input type="checkbox" id="reqLicense">
-        <input type="checkbox" id="compLicense">
+          <!--Microsoft 365 License checkboxes-->
+          <div class="field"><label>Microsoft 365/Gsuite License (Affects Billing):</label></div>
 
-        <!--Microsoft 365 License checkboxes-->
-        Microsoft 365/Gsuite License (Affects Billing):
+          <!--Email checkboxes-->
+          <div class="field">
+          <input type="checkbox" id="addEmail">
+          <input type="checkbox" id="remvEmail">
+          <label for="addEmail remvEmail">Email</label>
+          </div>
 
-        <!--Email checkboxes-->
-        <input type="checkbox" id="addEmail">
-        <input type="checkbox" id="remvEmail">
-        <label for="addEmail remvEmail">Email</label>
+          <!--App Checkboxes-->
+          <div class="field">
+          <input type="checkbox" id="addApps">
+          <input type="checkbox" id="remvApps">
+          <label for="addApps remvApps">Apps</label>
+          </div>
 
-        <!--App Checkboxes-->
-        <input type="checkbox" id="addApps">
-        <input type="checkbox" id="remvApps">
-        <label for="addApps remvApps">Apps</label>
+          <!--Archive Checkboxes-->
+          <div class="field">
+          <input type="checkbox" id="addArchive">
+          <input type="checkbox" id="remvArchive">
+          <label for="addArchive remvArchive">Archive</label>
+          </div>
 
-        <!--Archive Checkboxes-->
-        <input type="checkbox" id="addArchive">
-        <input type="checkbox" id="remvArchive">
-        <label for="addArchive remvArchive">Archive</label>
-
-        <!--Kiosk Checkboxes-->
-        <input type="checkbox" id="addKiosk">
-        <input type="checkbox" id="remvKiosk">
-        <label for="addKiosk remvKiosk">Kiosk</label>
-
+          <!--Kiosk Checkboxes-->
+          <div class="field">
+          <input type="checkbox" id="addKiosk">
+          <input type="checkbox" id="remvKiosk">
+          <label for="addKiosk remvKiosk">Kiosk</label>
+          </div>
       </div>
     </section>
 
