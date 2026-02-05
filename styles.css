@@ -1,217 +1,276 @@
+
 :root{
-  --blue:#1f73b7;
-  --line:#b9c4d0;
-  --fill:#dbe3f4;
-  --text:#111;
+  --blue: rgb(49, 140, 186);
+  --ink: #222;
+  --muted: #666;
+  --field: #dbe3f4;
+  --rule: #333;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{ box-sizing: border-box; }
 
 body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#fff;
-  color:var(--text);
-}
-
-header,
-section{
-  width:980px;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 0;
+  padding: 18px 18px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: #fff;
 }
 
 header{
-  margin-top:18px;
-  margin-bottom:8px;
-  text-align:center;
-  font-size:22px;
-  font-weight:700;
-  color:var(--blue);
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--blue);
+  margin-bottom: 10px;
 }
 
-section{
-  margin-top:14px;
+/* Top request checkboxes */
+.Requests{
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 18px;
+}
+.Requests .request-list{
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.Requests .request-list .request-option{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  letter-spacing: .2px;
 }
 
-.title{
-  color:var(--blue);
-  font-size:18px;
-  font-weight:700;
-  margin:6px 0 8px;
+/* Contact block */
+.Contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 38px;
+  max-width: 820px;
+  margin: 0 auto 10px;
+}
+.Contact .field{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+.Contact .field label{
+  text-align: right;
+  padding-right: 12px;
+  font-weight: 600;
+}
+.Contact .field input{
+  width: 100%;
 }
 
-.field{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  min-height:28px;
-}
-
-label{
-  font-size:14px;
-  white-space:nowrap;
-}
-
+/* Shared input look */
 input[type="text"],
 input[type="tel"],
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"]{
-  height:26px;
-  padding:2px 6px;
-  background:var(--fill);
-  border:1px solid var(--line);
-  border-bottom:2px solid #777;
-  border-radius:2px;
+input[type="datetime-local"],
+textarea{
+  background-color: var(--field);
+  border: none;
+  border-bottom: 2px solid var(--rule);
+  padding: 6px 8px;
+  font-size: 13px;
 }
 
-input[type="checkbox"]{
-  width:14px;
-  height:14px;
+textarea{
+  width: 100%;
+  resize: vertical;
+  min-height: 54px;
 }
 
-.request-option{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  font-weight:700;
-}
-
-.Requests .request-list{
-  list-style:none;
-  padding:0;
-  margin:0 0 6px;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-}
-
-.Contact{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px 44px;
-}
-
-.Contact .field{
-  display:grid;
-  grid-template-columns:160px 1fr;
-}
-
-.Contact label{
-  text-align:right;
-  padding-right:12px;
-}
-
-.Contact input{
-  min-width:320px;
-}
-
+/* Login credentials */
 .login-credentials{
-  max-width:980px;
+  max-width: 1000px;
+  margin: 6px auto 0;
 }
-
+.login-credentials .title{
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
 .login-credentials .credentials-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:10px 22px;
-  align-items:end;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-#compUsername{
-  min-width:320px;
+.login-credentials .field{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
+.login-credentials .field label{
+  font-weight: 600;
+  white-space: nowrap;
+}
+#compUsername{ min-width: 300px; }
 .login-credentials .note{
-  margin-top:6px;
-  font-size:12px;
-  font-style:italic;
+  margin: 4px 0 0 90px;
+  font-size: 12px;
+  font-style: italic;
 }
 
-.Username-365{
-  max-width:980px;
+/* ---------- GoCloud / Non-GoCloud styling ---------- */
+.section{
+  max-width: 1000px;
+  margin: 16px auto 0;
 }
 
-.Username-365 .reqComp{
-  font-size:12px;
-  margin:2px 0 4px;
+.section-title{
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
-.Username-365 .Username-Grid{
-  display:grid;
-  grid-template-columns:90px 1fr 240px 150px;
-  gap:10px 14px;
-  align-items:center;
+.rc-label{
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 2px;
 }
 
-#microsoftUsername{
-  min-width:320px;
+.row{
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  margin-top: 6px;
 }
 
-#domain{
-  min-width:200px;
+.rc{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 2px;
+}
+.rc input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
 }
 
-.License-365{
-  max-width:980px;
+.content{ width: 100%; }
+
+.inline{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.two-col{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
 }
 
-.License-365 .addRemove{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  width:440px;
-  margin-left:auto;
-  font-size:11px;
+.label-strong{ font-weight: 600; }
+.muted{ color: var(--muted); }
+.italic{ font-style: italic; }
+.small{ font-size: 11px; }
+.small-gap{ margin-top: 3px; }
+
+.at{
+  font-weight: 700;
+  color: var(--ink);
 }
 
-.License-365 .License-Grid{
-  display:grid;
-  grid-template-columns:90px 1fr 1fr 1fr 1fr 1fr;
-  gap:8px 14px;
-  align-items:center;
+.check-inline{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }
 
-.License-365 .field{
-  gap:6px;
+.spacer{ width: 10px; }
+
+/* widths to mimic the screenshot */
+.w-username{ width: 280px; }
+.w-domain{ width: 130px; }
+.w-dist{ width: 240px; }
+.w-conv{ width: 230px; }
+.w-user{ width: 140px; }
+.w-forward{ width: 240px; }
+.w-wide{ width: 360px; max-width: 100%; }
+.w-mid{ width: 260px; max-width: 100%; }
+
+/* License grid */
+.ar-headers{
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 120px);
+  align-items: end;
+  margin-bottom: 2px;
+}
+.ar-head {
+  font-size: 9px;
+  color: var(--muted);
+  text-align: center;
+
 }
 
-.DistributionList,
-.ConvertSharedMbx,
-.Phone,
-.Computer,
-.Printer,
-.VPNandNAS,
-.AdditionalNotes,
-.NonGoCloudInfo{
-  border-top:1px solid #00000010;
-  padding-top:10px;
-  font-size:14px;
+
+.license-grid{
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 120px);
+  gap: 6px 10px;
+  align-items: center;
+}
+.license-label{ white-space: nowrap; }
+.ar-option{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+}
+.ar-option input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
 }
 
-#distList,
-#convMbx,
-#frwd,
-#numbExt,
-#brandModel,
-#macAdd,
-#newComputer,
-#serialNum,
-#pcMakeModel,
-#printMFP,
-#ipAdd,
-#prntMakeModel,
-#crm,
-#accFin{
-  min-width:420px;
+/* Distribution list grid */
+.dist-table{
+  display: grid;
+  grid-template-columns: 150px 0fr 20px 120px 120px 80px;
+  gap: 6px 10px;
+  align-items: center;
+  margin-top: 6px;
+}
+.ar-pair{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.ar-pair input[type="checkbox"]{
+  width: 14px;
+  height: 14px;
 }
 
-.AdditionalNotes input{
-  width:100%;
+.remove-all{
+  margin-top: 6px;
 }
 
-.NonGoCloudInfo div:nth-child(2){
-  font-size:12px;
-  margin:4px 0 6px;
+/* Notes section */
+.notes textarea{
+  margin-top: 6px;
+}
+
+/* Slightly tighter on small screens */
+@media (max-width: 920px){
+  .Contact{ grid-template-columns: 1fr; }
+  .Contact .field{ grid-template-columns: 150px 1fr; }
+  .row{ grid-template-columns: 70px 1fr; }
+  .license-grid, .ar-headers{
+    grid-template-columns: 1fr;
+  }
+  .dist-table{
+    grid-template-columns: 76px 1fr;
+  }
 }
